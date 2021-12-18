@@ -2,18 +2,26 @@
   <div id="portfolio-wrapper">
     <div class="slide-in-contents page-content">
       <h1>Stuff I Made</h1>
-      <p>Here are some of my past projects. It's far from everything, but everything worth mentioning.</p>
+      <p>
+        Here are some of my past projects. It's far from everything, but
+        everything worth mentioning.
+      </p>
       <div id="items" class="container">
-        <div class="item" v-for="(item, index) in items" :key="item.name+index">
-          <h3 class="item-title">{{item.name}}</h3>
-          <img :src="`https://picsum.photos/250/180?dummy=${Math.random()}`" alt class="thumbnail" />
-          <p class="item-description">{{item.description}}</p>
+        <div
+          class="item"
+          v-for="(item, index) in items"
+          :key="item.name + index"
+        >
+          <h3 class="item-title">{{ item.name }}</h3>
+
+          <p class="item-description">{{ item.description }}</p>
           <p class="links">
             <a
               v-for="link in item.links"
               :href="link.url"
-              :key="link.url+Math.random()"
-            >{{link.label}}</a>
+              :key="link.url + Math.random()"
+              >{{ link.label }}</a
+            >
           </p>
         </div>
       </div>
@@ -28,62 +36,62 @@ export default {
     return {
       items: [
         {
-          name: "visiejs",
+          name: "traj-propagate",
           description:
-            "Lightweight & barebones reactive view library written in TypeScript",
+            "SPICE-integrated n-body astronimical object and spacecraft trajectory propagation tool",
           links: [
-            { label: "Github", url: "https://github.com/pixldemon/visiejs" },
-            { label: "npm", url: "https://www.npmjs.com/package/visiejs" }
-          ]
+            {
+              label: "Github",
+              url: "https://github.com/pixldemon/traj-propagate",
+            },
+          ],
+        },
+
+        {
+          name: "respondix",
+          description:
+            "Lightweight, zero-dependency, proxy-based reactivity library",
+          links: [
+            { label: "Github", url: "https://github.com/pixldemon/respondix" },
+            { label: "npm", url: "https://www.npmjs.com/package/respondix" },
+          ],
         },
         {
-          name: "Lorem ipsum",
+          name: "naivdom",
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolor ipsa fugit, voluptatum aspernatur.",
+            "Simple virtual DOM implementation including a basic patching algorithm",
           links: [
-            { label: "Github", url: "#" },
-            { label: "Deployed Here", url: "#" }
-          ]
+            { label: "Github", url: "https://github.com/pixldemon/naivdom" },
+            { label: "npm", url: "https://www.npmjs.com/package/naivdom" },
+          ],
         },
         {
-          name: "Lorem ipsum",
+          name: "tinytemplatec",
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolor ipsa fugit, voluptatum aspernatur.",
+            "VDOM-agnostic HTML template compiler with support for vue-like directives",
           links: [
-            { label: "Github", url: "#" },
-            { label: "Deployed Here", url: "#" }
-          ]
+            {
+              label: "Github",
+              url: "https://github.com/pixldemon/tinytemplatec",
+            },
+            {
+              label: "npm",
+              url: "https://www.npmjs.com/package/tinytemplatec",
+            },
+          ],
         },
         {
-          name: "Lorem ipsum",
+          name: "yaduil",
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolor ipsa fugit, voluptatum aspernatur.",
+            "Tiny, vue-inspired front-end view library. Made up of tinytemplatec, naivdom and respondix.",
           links: [
-            { label: "Github", url: "#" },
-            { label: "Deployed Here", url: "#" }
-          ]
+            { label: "Github", url: "https://github.com/pixldemon/yaduil" },
+            { label: "npm", url: "https://www.npmjs.com/package/yaduil" },
+          ],
         },
-        {
-          name: "Lorem ipsum",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolor ipsa fugit, voluptatum aspernatur.",
-          links: [
-            { label: "Github", url: "#" },
-            { label: "Deployed Here", url: "#" }
-          ]
-        },
-        {
-          name: "Lorem ipsum",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolor ipsa fugit, voluptatum aspernatur.",
-          links: [
-            { label: "Github", url: "#" },
-            { label: "Deployed Here", url: "#" }
-          ]
-        },
-      ]
+      ],
     };
-  }
+  },
 };
 </script>
 
@@ -100,26 +108,26 @@ main {
   justify-items: space-between;
   grid-template-columns: repeat(auto-fill, minmax(250px, auto));
   .item {
-    padding: 1rem;
     border-radius: 0px;
-    min-height: 300px;
+    min-height: 200px;
     transition: 0.2s;
     background-color: white;
+
+    :not(:last-child) {
+      margin-right: 0.4rem;
+    }
+
     h3 {
       font-size: 2rem;
       margin: 0 0 0.5rem 0;
     }
-    img {
-      width: calc(100% + 2rem);
-      margin: 0 -1rem;
-    }
     .links {
       a {
         font-size: 0.9em;
-			}
-			a:not(:last-child) {
-				margin-right: 1rem;
-			}
+      }
+      a:not(:last-child) {
+        margin-right: 1rem;
+      }
     }
   }
 }
