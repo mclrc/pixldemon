@@ -1,7 +1,7 @@
 <template>
   <p class="typing-element">
     I love
-    <span>&emsp;{{currentText}}</span>
+    <span>&emsp;{{ currentText }}</span>
   </p>
 </template>
 
@@ -9,7 +9,7 @@
 export default {
   name: "TypingElement",
   created() {
-    this.phraseIndex = Math.floor((this.phrases.length - 1) * Math.random())
+    this.phraseIndex = Math.floor((this.phrases.length - 1) * Math.random());
     this.write();
   },
   methods: {
@@ -37,7 +37,7 @@ export default {
         this.phraseIndex = (this.phraseIndex + 1) % this.phrases.length;
         setTimeout(this.write.bind(this), 2000);
       }
-    }
+    },
   },
   data() {
     return {
@@ -53,16 +53,16 @@ export default {
         "Linux.",
         "Python.",
         "JavaScript.",
+        "Rust",
         "Vue.js.",
         "everything tech.",
         "scuba diving.",
         "computer hardware.",
-        "tennis.",
         "solving problems.",
-        "what little C++ I know."
-      ]
+        "what little C++ I know.",
+      ],
     };
-  }
+  },
 };
 </script>
 
