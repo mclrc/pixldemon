@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Moritz</h1>
 <h3 align="center">Teenage tech enthusiast from Berlin</h3>
 
-- I’m currently working on **a lightweight front end library**
+- I’m currently working on **whatever I feel like**
 
 - I’m currently learning **Rust**
 
