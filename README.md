@@ -1,5 +1,4 @@
-<h1 align="center">Hi, I'm Moritz</h1>
-<h3 align="center">Teenage tech enthusiast from Berlin</h3>
+<h1 align="center">Hi, I'm Moritz and I like to code</h1>
 
 - I’m currently working on **whatever I feel like**
 
