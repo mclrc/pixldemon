@@ -7,22 +7,13 @@
         everything worth mentioning.
       </p>
       <div id="items" class="container">
-        <div
-          class="item"
+        <PortfolioItem
           v-for="(item, index) in items"
           :key="item.name + index"
-        >
-          <h3 class="item-title">{{ item.name }}</h3>
-
-          <p class="item-description">{{ item.description }}</p>
-          <p class="links">
-            <a
-              v-for="link in item.links"
-              :href="link.url"
-              :key="link.url + Math.random()"
-              >{{ link.label }}</a
-            >
-          </p>
+          :name="item.name"
+          :description="item.description"
+          :links="item.links"
+        />
         </div>
       </div>
     </div>
@@ -30,15 +21,19 @@
 </template>
 
 <script>
+import PortfolioItem from '@/components/PortfolioItem.vue'
 export default {
   name: "Portfolio",
+  components: {
+    PortfolioItem
+  },
   data() {
     return {
       items: [
         {
           name: "traj-propagate",
           description:
-            "SPICE-integrated n-body astronimical object and spacecraft trajectory propagation tool",
+            "SPICE-integrated n-body astronomical object and spacecraft trajectory propagation tool",
           links: [
             {
               label: "Github",
@@ -59,7 +54,7 @@ export default {
         {
           name: "naivdom",
           description:
-            "Simple virtual DOM implementation including a basic patching algorithm",
+            "Simple virtual DOM implementation with a basic patching algorithm",
           links: [
             { label: "Github", url: "https://github.com/pixldemon/naivdom" },
             { label: "npm", url: "https://www.npmjs.com/package/naivdom" },
