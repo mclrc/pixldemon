@@ -39,10 +39,10 @@ export default {
           name: "Home",
           path: "/"
         },
-        {
+        /*{
           name: "About Me",
           path: "/about"
-        },
+        },*/
         {
           name: "Portfolio",
           path: "/portfolio"

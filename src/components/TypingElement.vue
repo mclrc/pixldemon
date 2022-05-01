@@ -1,6 +1,6 @@
 <template>
   <p class="typing-element">
-    I love
+    I like
     <span>&emsp;{{ currentText }}</span>
   </p>
 </template>
@@ -47,19 +47,12 @@ export default {
       charIndex: 0,
       currentText: "",
       phrases: [
-        "web development",
-        "video games",
-        "creating video games",
         "Linux",
-        "Python",
-        "JavaScript",
-        "Rust",
-        "Vue.js",
-        "everything tech",
-        "scuba diving",
-        "computer hardware.",
-        "solving problems",
-        "what little C++ I know",
+        "games",
+        "making games",
+        "web dev",
+        "tinkering with hardware",
+        "learning new things",
       ],
     };
   },
@@ -91,8 +84,8 @@ export default {
   &::after {
     display: inline-block;
     content: "";
-    width: 8px;
-    height: 1.3rem;
+    width: 10px;
+    height: 1.4rem;
     margin: 0 0.2rem;
     background-color: $text-color;
     animation: blink 0.9s step-end infinite;

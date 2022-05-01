@@ -3,16 +3,11 @@
     <div class="slide-in-contents page-content" id="home-content-wrapper">
       <h1>Hello There!</h1>
       <p>
-        My name is Moritz. I’m a german tech enthusiast in my teens. Since I
-        fell in love with computers and programming a few years ago, I have
-        tried to learn all that I can about a variety of topics related to
-        computer science and software engineering.
+        My name is Moritz. I make stuff with computers sometimes, and when I make something that I think is worth sharing,
+        this is where I put it. Have a look around!
       </p>
-      <p>
-        The goal of this site is to catalog my development journey, but also to
-        motivate myself to create more cool stuff to put on here.
-      </p>
-      <h2>My Arsenal</h2>
+      <TypingElement />
+      <h2>Technologies I use</h2>
       <div id="stack-wrapper">
         <div id="items">
           <div class="stack-item" v-for="item in items" :key="item.title">
@@ -31,18 +26,10 @@
         />
       </div>
       <p>
-        I've also written my own front-end library,
-        <a href="https://github.com/pixldemon/yaduil">yaduil</a>, but that's
-        more of an experiment that an attempt to create something useful in
-        practice. Writing basic tooling myself is something I love. Not because
-        it's productive, but because it's fun and teaches you a lot.
-      </p>
-      <p>
-        In the past, I've done mainly web and gamedev, but am currently dabbling
-        in physics simulations with
-        <a href="https://github.com/pixldemon/traj-propagate">traj-propagate</a
-        >, a trajectory propagation tool for astronomical objects and
-        spacecraft.
+        I dabble in a lot of different technologies, trying whatever I'm currently interested in. Generally, I like writing things
+        mostly from the ground up and understanding the underlying tech, which is why I sometimes make my own libraries or tools.
+        Having fun and expanding my knowledge is my primary goal. I don't usually care about making something actually useful, as
+        long as I learned something from building it.
       </p>
     </div>
   </div>
@@ -64,32 +51,32 @@ export default {
         {
           icon: "/assets/tsicon.jpg",
           title: "Typescript",
-          description: "For less headaches with anything JS",
+          description: "For anything that needs to run in a browser. The language I'm the most proficient in.",
         },
         {
           icon: "/assets/vue.png",
-          title: "Vue.js",
-          description: "For lightning fast, dynamic UI",
+          title: "Vue",
+          description: "For websites that need dynamic UI. My favorite front-end framework.",
         },
         {
           icon: "/assets/rusticon.png",
           title: "Rust",
-          description: "For performance, convenience and safety",
+          description: "For making things fast and having fun at the same time. Currently my favorite language.",
         },
         {
           icon: "/assets/pythonicon.png",
           title: "Python",
-          description: "For quick data processing and scripting",
+          description: "For automation and quick scripting. Or when I just want to quickly try something.",
         },
         {
           icon: "/assets/archicon.png",
           title: "Arch Linux",
-          description: "For freedom and productivity",
+          description: "For customization and peace of mind. An OS that actually respects you."
         },
         {
           icon: "/assets/cliicon.png",
-          title: "The Command Line",
-          description: "For getting things done",
+          title: "The Terminal",
+          description: "Because it's simply the best.",
         },
       ],
     };
